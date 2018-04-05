@@ -28,8 +28,11 @@
 												LEFT JOIN categories
 												ON category_id= categories.id
 												WHERE category_id=?',
-												['$category_id'],
+												[$category_id],
 												__CLASS__,
-												true);	
+												false);	
 		}
+		public static function find($id){
+		return Main::getDb()->prepare('SELECT * FROM posts WHERE id= ?',[$_GET['id']],'App\Model\Article',true);
+	}
 	}

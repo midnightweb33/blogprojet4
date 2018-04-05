@@ -11,6 +11,6 @@ class Categorie{
 		}
 	}
 	public static function find($id){
-		return Main::getDb()->prepare('SELECT * FROM categories WHERE id=?',[$id], __CLASS__ , true);
+		return Main::getDb()->prepare('SELECT * FROM categories WHERE id=?',[$id], __CLASS__ ,true);
 	}
 }
