@@ -21,7 +21,6 @@ namespace App;
 				
 				$class=str_replace('\\', '/', $class);
 				
-				
 				require __DIR__.'/'.$class.'.php';
 			}
 		}
